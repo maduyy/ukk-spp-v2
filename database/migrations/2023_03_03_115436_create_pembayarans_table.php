@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignUuid('tunggakan_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('tgl_bayar');
             $table->string('bulan_dibayar');
-            // $table->string('bulan');
             $table->string('nisn');
             $table->integer('jumlah_bayar');
             $table->integer('total');

@@ -53,11 +53,11 @@
                       </div>
                     </div>
                       <div class="form-group row mb-4">
-                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama</label>
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">kelas</label>
                       <div class="col-sm-12 col-md-7">
                         <select class="form-control selectric"  name="siswa_id" required>
                          @foreach($siswa as $data)
-                            <option {{ $data->id == old('siswa_id') ? 'selected' : '' }} value="{{ $data->kelas }}">{{$data->nama_kelas}}</option>
+                            <option {{ $data->id == old('siswa_id') ? 'selected' : '' }} value="{{ $data->id }}">{{$data->kelas->nama_kelas}}</option>
                             @endforeach
                         </select>
                       </div>

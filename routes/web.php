@@ -39,10 +39,6 @@ Route::middleware('login')->group(
             $dompdf = new Dompdf();
             $html = view('admin.pembayaran.pdf', compact('history'))->render();
             $dompdf->loadHtml($html);
-            $dompdf->setPaper(
-                'A4',
-                'portrait'
-            );
             $dompdf->render();
             return $dompdf->stream('Laporan Pembayaran.pdf');
         })->middleware('admin');

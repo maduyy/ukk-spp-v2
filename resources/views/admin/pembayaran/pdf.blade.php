@@ -25,45 +25,45 @@
     <table class="table align-items-center mt-4 mb-0">
         <thead>
           <tr>
-            <th class="text-uppercase text-xs font-weight-bolder opacity-9">No</th>
-            <th class="text-uppercase text-xs font-weight-bolder opacity-9">Petugas</th>
-            <th class="text-uppercase text-xs font-weight-bolder opacity-9">NISN</th>
-            <th class="text-uppercase text-xs font-weight-bolder opacity-9">SPP</th>
-            <th class="text-uppercase text-xs font-weight-bolder opacity-9">Bulan Dibayar</th>
-            <th class="text-uppercase text-xs font-weight-bolder opacity-9">Jumlah Bayar</th>
-            <th class="text-uppercase text-xs font-weight-bolder opacity-9">Sisa Tunggakan</th>
-            <th class="text-uppercase text-xs font-weight-bolder opacity-9">Tanggal</th>
-            <th class="text-uppercase text-xs font-weight-bolder opacity-9">Status</th>
+            <th>No</th>
+            <th>Petugas</th>
+            <th>NISN</th>
+            <th>SPP</th>
+            <th>Bulan Dibayar</th>
+            <th>Jumlah Bayar</th>
+            <th>Sisa Tunggakan</th>
+            <th>Tanggal</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           @foreach($history as $row)
             <tr>
-              <td class="text-xs font-weight-bolder opacity-7">
+              <td>
                 {{ $loop->iteration }}
               </td>
-              <td class="text-xs font-weight-bolder opacity-7">
+              <td>
               {{ $row->user->nama_petugas }}
               </td>
-              <td class="text-xs font-weight-bolder opacity-7">
+              <td>
                 {{ $row->nisn }}
               </td>
-              <td class="text-xs font-weight-bolder opacity-7">
+              <td>
                 Rp {{ number_format($row->siswa->spp->nominal, 0, ',', '.') }}
               </td>
-              <td class="text-xs font-weight-bolder opacity-7">
+              <td>
               {{ $row->bulan_dibayar }} bulan
               </td>
-              <td class="text-xs font-weight-bolder opacity-7">
+              <td>
                Rp {{ number_format($row->jumlah_bayar, 0, ',', '.') }}
               </td>
-              <td class="text-xs font-weight-bolder opacity-7">
+              <td>
                Rp {{ number_format($row->total, 0, ',', '.') }}
               </td>
-              <td class="text-xs font-weight-bolder opacity-7">
+              <td>
                {{ $row->tgl_bayar }}
               </td>
-              <td class="text-xs font-weight-bolder opacity-7">
+              <td>
                 {{ $row->status }}
               </td>
 
