@@ -24,7 +24,7 @@
                 $(".alert").fadeTo(500, 0).slideUp(500, function(){
                 $(this).remove();
                 });
-            }, 3000);
+            }, 1000);
             </script>
             <div class="row">
               <div class="col-12">

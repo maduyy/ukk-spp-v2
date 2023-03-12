@@ -4,7 +4,7 @@
         <section class="section">
           <div class="section-header">
             <div class="section-header-back">
-              <a href="{{route('tunggakan.index')}}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+              <a href="{{route('pembayaran.index')}}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             <h1>Tambah Data Pembayaran</h1>
             <div class="section-header-breadcrumb">
@@ -36,9 +36,7 @@
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Petugas</label>
                       <div class="col-sm-12 col-md-7">
                         <select class="form-control selectric"  name="user_id" required>
-                         @foreach($user as $data)
-                            <option {{ $data->id == old('user_id') ? 'selected' : '' }} value="{{ $data->id }}">{{$data->nama_petugas}}</option>
-                            @endforeach
+                        <option>{{ Auth::user()->username}}</option>
                         </select>
                       </div>
                     </div>

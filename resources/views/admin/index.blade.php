@@ -116,7 +116,7 @@
                         </tr>
                             @foreach($notif as $data)
                         <tr>
-                              <td>{{ Auth::user()->username }}</td>
+                              <td>{{$data->user}}</td>
                             <td>{{$data->aktivitas}}</td>
 
                             <td>{{$data->waktu}}</td>

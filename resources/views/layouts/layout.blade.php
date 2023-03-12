@@ -40,7 +40,6 @@
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
           </ul>
-
         </form>
         <ul class="navbar-nav navbar-right">
           <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
@@ -127,7 +126,7 @@
               </ul>
             </li>
             <li><a class="nav-link" href="/admin/petugas/tunggakan"><i class="fas fa-money-check"></i> <span>Tunggakan</span></a></li>
-            <li><a class="nav-link" href="/admin/petugas/pembayaran"><i class="fas fa-money-check"></i> <span>Entri Pembayaran</span></a></li>
+            <li><a class="nav-link" href="/admin/petugas/pembayaran"><i class="fas fa-file-alt"></i><span>Entri Pembayaran</span></a></li>
             <li><a class="nav-link" href="/admin/petugas/histori"><i class="fas fa-money-check"></i> <span>Histori Pembayaran</span></a></li>
         @endif
         {{-- //ROUTER SISWA --}}

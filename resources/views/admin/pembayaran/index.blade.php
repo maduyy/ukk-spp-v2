@@ -56,7 +56,7 @@
 
                         @foreach ($pembayaran as $data)
                             <td> {{ $loop->iteration }}</td>
-                            <td>{{ $data->user->nama_petugas }}</td>
+                            <td>{{ $data->user_id }}</td>
                             <td>{{ $data->nisn}}</td>
                             <td>Rp {{ number_format($data->siswa->spp->nominal, 0, ',', '.') }}</td>
                             <td>{{ $data->bulan_dibayar }} bulan</td>

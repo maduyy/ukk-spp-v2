@@ -31,7 +31,6 @@ Route::middleware('login')->group(
         //ROUTER PETUGAS
         Route::get('/petugas', [DashboardController::class, 'petugas'])->middleware('petugas');
         Route::get('/admin/petugas/tunggakan', [TunggakanController::class, 'petugas'])->middleware('petugas');
-        // Route::resource('/admin/petugas/pembayaran', PembayaranController::class)->middleware('petugas');
         Route::get('/admin/petugas/histori', [PembayaranController::class, 'histori'])->middleware('petugas');
 
         Route::get('/generateLaporan', function () {

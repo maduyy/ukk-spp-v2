@@ -7,6 +7,7 @@ use App\Models\Notif;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 use App\Http\Middleware\Petugas;
+use Illuminate\Support\Facades\Auth;
 
 class PetugasController extends Controller
 {
@@ -44,6 +45,7 @@ class PetugasController extends Controller
 
         User::create($validateData);
         Notif::create([
+            'user' => Auth::user()->role == 'Admin',
             'waktu' => date("Y-m-d H:i:s"),
             'aktivitas' => 'Menambahkan data Petugas',
         ]);
@@ -98,6 +100,7 @@ class PetugasController extends Controller
         if ($petugas) {
             $petugas->delete();
             Notif::create([
+                'user' => Auth::user()->role == 'Admin',
                 'waktu' => date("Y-m-d H:i:s"),
                 'aktivitas' => 'Menghapus data Petugas',
             ]);

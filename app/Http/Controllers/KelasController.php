@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kelas;
 use App\Models\Notif;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class KelasController extends Controller
 {
@@ -37,6 +38,7 @@ class KelasController extends Controller
         ]);
         Kelas::create($request->all());
         Notif::create([
+            'user' => Auth::user()->username,
             'waktu' => date("Y-m-d H:i:s"),
             'aktivitas' => 'Menambahkan data Kelas',
         ]);
@@ -70,6 +72,7 @@ class KelasController extends Controller
 
         $kelas->update($request->all());
         Notif::create([
+            'user' => Auth::user()->role == 'Admin',
             'waktu' => date("Y-m-d H:i:s"),
             'aktivitas' => 'Mengedit data Kelas',
         ]);
@@ -85,6 +88,7 @@ class KelasController extends Controller
         if ($kelas) {
             $kelas->delete();
             Notif::create([
+                'user' => Auth::user()->username,
                 'waktu' => date("Y-m-d H:i:s"),
                 'aktivitas' => 'Menghapus data Kelas',
             ]);

@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use App\Exports\PembayaranExport;
 use Maatwebsite\Excel\Facades\Excel;
 
-class PembayaranController extends Controller
+class PetugasPembayaranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -50,7 +50,7 @@ class PembayaranController extends Controller
     {
         $rules = [
             'nisn' => ['required'],
-            'user_id' => ['required', 'string'],
+            'user_id' => ['required'],
             'siswa_id' => ['required'],
             'tunggakan' => ['required'],
             'bulan_dibayar' => ['required', 'numeric'],
@@ -71,7 +71,7 @@ class PembayaranController extends Controller
             $tunggakan->sisa_tunggakan -= $request->jumlah_bayar;
             $tunggakan->save();
 
-            $validatedData['total'] = $tunggakan->sisa_tunggakan - $request->jumlah_bayar;
+            $validatedData['total'] = $tunggakan->total_tunggakan - $request->jumlah_bayar;
             $validatedData['tunggakan_id'] = $request->tunggakan;
             $validatedData['tgl_bayar'] = date('j F Y');
             unset($validatedData['tunggakan']);

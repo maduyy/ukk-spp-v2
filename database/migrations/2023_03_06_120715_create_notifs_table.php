@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('notifs', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->string('user');
             $table->string('waktu');
             $table->string('aktivitas');
             $table->timestamps();
