@@ -43,6 +43,7 @@
                             <th>No</th>
                             <th>Petugas</th>
                             <th>Nisn</th>
+                            <th>Nama</th>
                             <th>Spp</th>
                             <th>Bulan Dibayar</th>
                             <th>Jumlah Bayar</th>
@@ -58,10 +59,11 @@
                             <td> {{ $loop->iteration }}</td>
                             <td>{{ $data->user_id }}</td>
                             <td>{{ $data->nisn}}</td>
+                            <td>{{ $data->siswa->nama}}</td>
                             <td>Rp {{ number_format($data->siswa->spp->nominal, 0, ',', '.') }}</td>
                             <td>{{ $data->bulan_dibayar }} bulan</td>
                             <td>Rp {{ number_format($data->jumlah_bayar, 0, ',', '.') }}</td>
-                            <td>Rp {{ number_format($data->total, 0, ',', '.') }}</td>
+                            <td>{{ $data->total}}</td>
                             <td>{{ $data->tgl_bayar }}</td>
                             <td>{{ $data->status }}</td>
                             <td>

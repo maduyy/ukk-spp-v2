@@ -71,7 +71,7 @@ class PembayaranController extends Controller
             $tunggakan->sisa_tunggakan -= $request->jumlah_bayar;
             $tunggakan->save();
 
-            $validatedData['total'] = $tunggakan->sisa_tunggakan - $request->jumlah_bayar;
+            $validatedData['total'] = $tunggakan->sisa_tunggakan;
             $validatedData['tunggakan_id'] = $request->tunggakan;
             $validatedData['tgl_bayar'] = date('j F Y');
             unset($validatedData['tunggakan']);

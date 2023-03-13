@@ -12,6 +12,7 @@
           <div class="section-body">
             <h2 class="section-title">Data Kelas</h2>
             <p class="section-lead">List data kelas dan kompetensi keahlian</p>
+
             <div role="alert">
             @if ($message = Session::get('success'))
                 <div class="alert alert-success">
@@ -34,14 +35,11 @@
                     <div class="card-header-action">
                             <a href="{{ route('kelas.create') }}" class="btn btn-info">Tambah</a>
                     </div>
-
                   </div>
 
                   <div class="card-body p-0">
-                     {{-- <input type="text" class="form-control mb-3 tablesearch-input" data-tablesearch-table="#data-table"  placeholder="Search"> --}}
-
                     <div class="table-responsive">
-                      <table class="table table-bordered" id="data-table" width="100%" cellspacing="0">
+                      <table  class="table table-striped" style="width:100%" id="data-table"  cellspacing="0">
 
                         <thead>
                           <tr>
@@ -79,22 +77,10 @@
           </div>
         </section>
       </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- <script>
-
-      $(document).ready(function() {
-
-        var headers = $('#data-table thead th');
-
-        $(headers[5]).attr('data-tablesort-type', 'date');
-
-
-        $('table').not(".tablesort").addClass('tablesort');
-        // $('')
-
-      });
-
-
-    </script>
+     <script>
+        $(document).ready(function () {
+    $('#data-table').DataTable();
+});
+     </script>
 @endsection
 

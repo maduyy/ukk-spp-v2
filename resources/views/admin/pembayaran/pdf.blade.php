@@ -43,7 +43,7 @@
                 {{ $loop->iteration }}
               </td>
               <td>
-              {{ $row->user->nama_petugas }}
+              {{ $row->user_id }}
               </td>
               <td>
                 {{ $row->nisn }}

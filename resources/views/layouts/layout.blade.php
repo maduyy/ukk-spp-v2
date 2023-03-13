@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Blank Page</title>
-
+  <title>Spp</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css">
   <!-- General CSS Files -->
   <link rel="stylesheet" href="{{asset('asset/dist/assets/modules/bootstrap/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('asset/dist/assets/modules/fontawesome/css/all.min.css')}}">
@@ -138,11 +139,6 @@
             </li>
              <li><a class="nav-link" href="/admin/siswas/histori"><i class="fas fa-file-invoice-dollar"></i> <span>histori</span></a></li>
             @endif
-          {{-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-            <a class="btn btn-danger     btn-lg btn-block btn-icon-split"  href="/logout">
-               <i class="fas fa-sign-out-alt"></i> Logout
-            </a>
-          </div> --}}
     </aside>
       </div>
     </div>
@@ -160,5 +156,13 @@
   <!-- Template JS File -->
   <script src="{{asset('asset/dist/assets/js/scripts.js')}}"></script>
   <script src="{{asset('asset/dist/assets/js/custom.js')}}"></script>
+
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#data-table').DataTable();
+        });
+    </script>
 </body>
 </html>

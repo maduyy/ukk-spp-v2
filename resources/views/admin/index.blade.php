@@ -110,15 +110,13 @@
                     <div class="table-responsive">
                       <table class="table table-striped table-md">
                         <tr>
-                          <th>User</th>
+
                           <th>Aktivitas</th>
                           <th>waktu</th>
                         </tr>
                             @foreach($notif as $data)
                         <tr>
-                              <td>{{$data->user}}</td>
                             <td>{{$data->aktivitas}}</td>
-
                             <td>{{$data->waktu}}</td>
                         </tr>
                             @endforeach

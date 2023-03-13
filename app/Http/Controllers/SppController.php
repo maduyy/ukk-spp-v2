@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Spp;
 use App\Models\Notif;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SppController extends Controller
 {
@@ -36,6 +37,7 @@ class SppController extends Controller
         ]);
         Spp::create($request->all());
         Notif::create([
+
             'waktu' => date("Y-m-d H:i:s"),
             'aktivitas' => 'Menambahkan data Spp',
         ]);
